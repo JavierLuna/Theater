@@ -8,14 +8,16 @@ import javax.swing.*;
 public abstract class Scene extends JFrame implements LifeCycle{
 
 
-    public Scene(){
+    protected Scene(){
         super();
+        onCreate();
         setVisible(true);
 
     }
 
     public void finish(){
         setVisible(false);
+        onDestroy();
         dispose();
     }
 
