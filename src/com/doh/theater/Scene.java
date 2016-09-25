@@ -7,13 +7,19 @@ import javax.swing.*;
  */
 public abstract class Scene extends JFrame implements LifeCycle{
 
+    private int id;
 
     protected Scene(){
         super();
         onCreate();
         setVisible(true);
 
+
     }
+
+    protected void setId(int id){this.id = id;}
+
+    public int getId(){return id;}
 
     public void finish(){
         setVisible(false);
